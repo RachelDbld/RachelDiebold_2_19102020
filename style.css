@@ -1,0 +1,81 @@
+@font-face {
+	font-family: Raleway;
+	src: url ("C:\Users\axiau\Desktop\P2_DIEBOLD_RACHEL\Raleway\static");
+}
+
+body
+{
+    font-family:'Raleway Regular', sans-serif;
+}
+
+p
+{
+	font-family: 'Raleway Medium', sans-serif;
+	font-size: 0.9em;
+	color: #000000;
+}
+
+h1
+{
+	font-family: 'Raleway Black', sans-serif;
+	font-size: 1.1em;
+	color: #000000;
+}
+
+nav
+{
+	font-family: 'Raleway Medium';
+	float : right;
+	margin-right: 5%;
+	width: 25%;
+	min-width: 200px;
+}
+nav ul
+{
+	list-style-type: none;
+	display: flex;
+}
+
+nav li
+{
+	margin-right: 35px;
+	margin-top: 5%;
+}
+
+nav a
+{
+	font-size: 0.9em;
+	color: #000000;
+	text-decoration: none;
+	padding-top: 20px;
+}
+
+nav a:hover
+{
+    color: #0065FC;
+    border-top: 2px solid;
+
+}
+
+.inscription a
+{
+	color: #0065FC;
+	font-weight: bold;
+}
+
+.inscription a:hover
+{
+	color: #000000;
+	font-weight: bold;
+	border-top: 2px solid black;
+}
+
+i
+{
+	font-size: 15px;
+	background: #F2F2F2 center;
+	display: block;
+	width: 30px;
+	height: 30px;
+	border-radius: 50%;
+}

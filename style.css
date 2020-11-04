@@ -1,3 +1,5 @@
+
+
 @font-face {
 	font-family: Raleway;
 	src: url ("C:\Users\axiau\Desktop\P2_DIEBOLD_RACHEL\Raleway\static");
@@ -5,8 +7,6 @@
 
 body
 {
-    margin: 5px;
-    padding: 5px;
     font-family:'Raleway Regular', sans-serif;
     width: 100%;
     height: 100%;
@@ -15,37 +15,63 @@ body
 p
 {
 	font-family: 'Raleway Medium', sans-serif;
-	font-size: 0.9em;
+	font-size: 14px;
 	color: #000000;
 }
 
 h1
 {
 	font-family: 'Raleway Black', sans-serif;
-	font-size: 1.1em;
+	font-size: 18px;
 	color: #000000;
 }
 
 h2
 {
 	font-family: 'Raleway Black', sans-serif;
-	font-size:0.9em;
+	font-size:14px;
 	color: #000000;
 }
 
 h3
 {
 	font-family: 'Raleway Regular', sans-serif;
-	font-size:0.9em;
+	font-size:14px;
 	color: #000000;
 }
-
+                                                             /*HEADER*/
 header
 {
 	display: flex;
 	align-items: flex-end;
 	justify-content: flex-start;
 	padding-right: 25px;
+}
+
+header div a
+{
+	
+	font-family: 'Raleway Medium';
+	font-size: 14px;
+	color: #0065FC;
+	font-weight: bold;
+	display: flex;
+	align-items: flex-end;
+	justify-content: flex-end;
+}
+
+header div a:hover
+{
+	color: #000000;
+	font-weight: bold;
+	border-top: 2px solid black;
+}
+                                                             /*NAV*/
+
+.menu 
+{
+	margin-left: auto;
+	align-items: baseline;
 }
 
 nav
@@ -68,7 +94,7 @@ nav li
 
 nav a
 {
-	font-size: 0.9em;
+	font-size: 14px;
 	color: #000000;
 	text-decoration: none;
 	padding-top: 20px;
@@ -84,31 +110,7 @@ nav a:hover
     border-top: 2px solid;
 
 }
-
-.menu {
-	margin-left: auto;
-	align-items: baseline;
-}
-
-header div a
-{
-	
-	font-family: 'Raleway Medium';
-	font-size: 0.9em;
-	color: #0065FC;
-	font-weight: bold;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
-}
-
-header div a:hover
-{
-	color: #000000;
-	font-weight: bold;
-	border-top: 2px solid black;
-}
-
+                                                             /*RECHERCHE*/
 #search
 {
 	display: flex;
@@ -118,7 +120,7 @@ header div a:hover
 
 #search i
 {
-	font-size: 1em;
+	font-size: 16px;
 	display: flex;
 	width: 50px;
 	height: 40px;
@@ -160,7 +162,7 @@ header div a:hover
 	background-color: #ffffff;
 	border: 1px #0065FC solid;
 }
-
+                                                             /*FILTRE*/
 #titre
 {
 	display: flex;
@@ -190,31 +192,43 @@ header div a:hover
 	height: 40px;
 	border-radius: 50%;
 	justify-content: space-around;
+	position:absolute;
+	z-index: 2;
 }
 
 #filter i:hover
-
 {
 	color: #0065FC;
 	background-color: #ffffff;
-	border: 1px #0065FC solid;
+	border: 1px #0065FC dashed;
 	cursor: pointer;
+	transform: rotate(0deg) translateX(10px);
 }
 
 #filter h2
 {
 	display: flex;
 	justify-content: flex-start;
-	align-items: center;
-	margin-left: 5px;
-	width: 200px;
+	align-items: center; 
+	width: 100%;
 	height: 40px;
+	padding: 0px 15px 0px 50px;
+	margin-right: 30px;
 	background-color: #ffffff;
 	border-radius: 150px 150px 150px 150px;
-	border : 2px #F2F2F2 solid;
+	border : 3px #F2F2F2 solid;
 	justify-content: space-around;
+	position: relative;
+	z-index: 1;
 }
 
+
+.money, .child, .heart, .dog
+{
+	display: flex;
+	align-items: center;
+}
+                                                             /*INFO*/
 #info
 {
 	display: flex;
@@ -225,7 +239,7 @@ header div a:hover
 #info i
 {
 	display: flex;
-	font-size: 0.8em;
+	font-size: 12px;
 	margin: 5px;
 	justify-content: flex-start;
 	align-items: center;
@@ -238,51 +252,128 @@ header div a:hover
 	justify-content: space-around;
 }
 
+                                                             /*HEBERGEMENT*/
+
+#accomodation a
+{
+	text-decoration: none;
+}
+
+#accomodation i
+{
+	display: inline-flex;
+	font-size: 12px;
+	align-items: center;
+	color: #0065FC;
+}
+
+.cannebiere i:nth-child(7)
+{
+	color: #F2F2F2;
+}
+
+#accomodation
+{
+    width: 100%;
+    height: 50%;
+	background-color: #F2F2F2;
+	border-radius: 15px 15px 15px 15px;
+}
+
+.cannebiere img
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	background-color: #ffffff;
+	width: 240px;
+	height: 130px;	
+	border-radius: 15px 15px 0px 0px;
+	object-fit: cover;
+	box-shadow: 10px 10px 5px 0px #F2F2F2;
+}
+.cannebiere figcaption
+{
+	display: flex;
+	width: 240px;
+	height: 40px;
+	align-items: center;	
+	background-color: #ffffff;
+	border-radius: 0px 0px 15px 15px;
+	box-shadow: 10px 10px 5px 0px #F2F2F2;
+}
+                                                             /*ACTIVITE*/
 #activities
 {
 	display: flex;
 	flex-direction: row;
+	flex-wrap: wrap;
 	margin: 0px 0px 50px 0px;
 	padding: 0px;
 	width: 100% ;
 	height:50% ;
 }
 
-.activités
+#activités
 
 {
     margin-left: 40px;
 }
+
 .marge
 {
 	margin-left: 15px;
 }
 
-.col1 .col2 .col3 .col4
+#col1 #col2 #col3 #col4
 {
 	display: flex;
 	flex-direction: column;
 	width: 240px;
 	height: 400px;
-	margin-right: 45px;
 }
-.col1 img
+
+#col2 #col4
+{
+	justify-content: space-between;
+}
+
+#col1 img, #col2 img, #col3 img, #col4 img
 {
 	display: flex;
 	flex-direction: column;
-	margin: 0px;
-	padding:0px;
-	justify-content: flex-start;
-	width: 240px;
-	height: 350px;
+	justify-content: flex-start;	
 	background-color: #ffffff;
 	border-radius: 15px 15px 0px 0px;
 	object-fit: cover;
 	box-shadow: 10px 10px 5px 0px #F2F2F2;
-
 }
 
-.col1 figcaption
+#col1 img
+{
+	width: 240px;
+	height: 350px;
+}
+
+#col2 img
+{
+	width: 240px;
+	height: 230px;
+}
+
+#col3 img
+{
+	width: 240px;
+	height: 350px;
+}
+
+#col4 img
+{
+	width: 240px;
+	height: 230px;
+}
+
+#col1 figcaption, #col2 figcaption, #col3 figcaption, #col4 figcaption
 {
 	display: flex;
 	width: 240px;
@@ -293,164 +384,40 @@ header div a:hover
 	box-shadow: 10px 10px 5px 0px #F2F2F2;
 }
 
-.col1 a
+#col1 a, #col2 a, #col3 a, #col4 a 
 {
 	display: flex;
 	text-decoration: none;
+	width: 240px;
+	margin-right: 50px;
 }
 
-.col1 figure:hover
+#col1 figure:hover, #col2 figure:hover, #col3 figure:hover, #col4 figure:hover
 {
 	opacity: 0.8;
 }
 
-.col2 img
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	margin: 0px;
-	padding: 0px;
-	width: 240px;
-	height: 230px;
-	background-color: #ffffff;
-	border-radius: 15px 15px 0px 0px;
-	object-fit: cover;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-
-}
-
-.fort img
+#fort img
 {
 	height: 175px;
 }
 
-.îles img
+#iles img
 {
 	height: 100px;
 }
 
-
-.col2 .col4
-{
-    display: flex;
-    flex-direction: column;
-	justify-content: space-between;
-}
-
-.col2 figcaption
-{
-	display: flex;
-	width: 240px;
-	height: 40px;
-	align-items: center;	
-	background-color: #ffffff;
-	border-radius: 0px 0px 15px 15px;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-}
-
-.col2 a
-{
-	display: flex;
-	text-decoration: none;
-}
-
-.col2 figure:hover
-{
-	opacity: 0.8;
-}
-
-.col3 img
-{
-	display: flex;
-	flex-direction: column;
-	margin: 0px;
-	padding:0px;
-	justify-content: flex-start;
-	width: 240px;
-	height: 350px;
-	background-color: #ffffff;
-	border-radius: 15px 15px 0px 0px;
-	object-fit: cover;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-
-}
-
-.col3 figcaption
-{
-	display: flex;
-	width: 240px;
-	height: 40px;
-	align-items: center;	
-	background-color: #ffffff;
-	border-radius: 0px 0px 15px 15px;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-}
-
-.col3 a
-{
-	display: flex;
-	text-decoration: none;
-}
-
-.col3 figure:hover
-{
-	opacity: 0.8;
-}
-
-.col4
-{
-    display: flex;
-    flex-direction: column;
-	justify-content: space-between;
-}
-.col4 img
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	margin: 0px;
-	padding: 0px;
-	width: 240px;
-	height: 230px;
-	background-color: #ffffff;
-	border-radius: 15px 15px 0px 0px;
-	object-fit: cover;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-
-}
-
-.dame img
+#dame img
 {
 	height: 130px;
 }
 
-.longchamp img
+#longchamp img
 {
 	height: 145px;
 }
 
-.col4 figcaption
-{
-	display: flex;
-	width: 240px;
-	height: 40px;
-	align-items: center;	
-	background-color: #ffffff;
-	border-radius: 0px 0px 15px 15px;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-}
-
-.col4 a
-{
-	display: flex;
-	text-decoration: none;
-}
-
-.col4 figure:hover
-{
-	opacity: 0.8;
-}
+                                                                /*FOOTER*/
 
 footer 
 {
@@ -475,7 +442,7 @@ footer ul
 
 footer a
 {
-	font-size: 0.9em;
+	font-size: 14px;
 	color: #000000;
 	text-decoration: none;
 }

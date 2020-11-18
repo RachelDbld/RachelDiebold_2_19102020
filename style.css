@@ -1,26 +1,62 @@
+                         /*RESET CSS*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+                         /*RESET CSS*/
+
 @font-face {
 	font-family: Raleway;
 	src: url ("C:\Users\axiau\Desktop\P2_DIEBOLD_RACHEL\Raleway\static");
-}
-
-html, body
-{
-	margin: 0px;
-	padding: 0px;
 }
 
 body
 {
     font-family:'Raleway Regular', sans-serif;
     width: 100%;
-    max-width: 1450px;
-    height: 100%;
 }
 
 p
 {
-	margin: 0px;
-	padding: 0px;
 	font-family: 'Raleway Medium', sans-serif;
 	font-size: 14px;
 	color: #000000;
@@ -28,8 +64,6 @@ p
 
 h1
 {
-	margin: 0px;
-	padding: 0px;
 	font-family: 'Raleway ExtraBold', sans-serif;
 	font-size: 18px;
 	color: #000000;
@@ -37,8 +71,6 @@ h1
 
 h2
 {
-	margin: 0px;
-	padding: 0px;
 	font-family: 'Raleway ExtraBold', sans-serif;
 	font-size:14px;
 	color: #000000;
@@ -46,8 +78,6 @@ h2
 
 h3
 {
-	margin: 0px;
-	padding: 0px;
 	font-family: 'Raleway ExtraBold', sans-serif;
 	font-size:13px;
 	color: #000000;
@@ -55,104 +85,120 @@ h3
 
 h4
 {
-	margin: 0px;
-	padding: 0px;
 	font-family: 'Raleway Regular', sans-serif;
 	font-size:13px;
 	color: #000000;
 }
 
-                                                             /*HEADER*/
+.container
+{
+	max-width: 1450px;
+	margin: auto;
+}
+
+                                                   /*HEADER*/
 header
 {
 	display: flex;
-	align-items: flex-end;
-	justify-content: flex-start;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	height: 100px; 
+/*Y A T IL UNE AUTRE METHODE POUR CREER DES ESPACES ?
+PLUTOT QUE DE METTRE UNE HAUTEUR*/
 }
 
-header div a
+nav
 {
-	
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	width: 500px;
+	font-family: 'Raleway Medium';
+}
+
+nav ul
+{
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	width:50%;
+	order: 0;
+}
+
+.barreG a, .barreD a
+{
+	font-size: 14px;
+	color: #000000;
+	text-decoration: none;
+	padding-top: 25px;
+	/* Y A T IL UNE AUTRE METHODE POUR CREER DE L ESPACE
+	ENTRE LE MOT ET SON BORDER ?*/ 
+}
+
+.barreG a:hover, .barreD a:hover
+{
+    color: #0065FC;
+    border-top: 2px solid;
+}
+
+#inscription
+{
+	display: flex;
+	justify-content: flex-end;
+	width: 25%;
+}
+
+#inscription a
+{	
 	font-family: 'Raleway Medium';
 	font-size: 14px;
 	color: #0065FC;
 	font-weight: bold;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
+	text-decoration: none;
+	padding-top: 25px;
 }
 
-header div a:hover
+#inscription a:hover
 {
 	color: #000000;
 	font-weight: bold;
 	border-top: 2px solid black;
 }
-                                                             /*NAV*/
 
-#menu 
-{
-	margin-left: auto;
-	align-items: baseline;
-}
-
-nav
-{
-	font-family: 'Raleway Medium';
-    display: flex;
-	justify-content: flex-start;
-}
-nav ul
-{
-	list-style-type: none;
-	display: flex;
-	align-items: flex-end;
-}
-
-nav li
-{
-	margin-right: 35px;
-}
-
-nav a
-{
-	font-size: 14px;
-	color: #000000;
-	text-decoration: none;
-	padding-top: 30px;
-	display: flex;
-	align-items: flex-end;
-	justify-content: flex-end;
-}
-
-
-nav a:hover
-{
-    color: #0065FC;
-    border-top: 2px solid;
-
-}
-                                     /*RECHERCHE*/
-
+                                            /*SECTION RECHERCHE*/
 .searchwrapper
 {
 	display: flex;
 	flex-direction: column;
-	height: 250px;
-	justify-content: space-around;
-} 
+	align-content: space-around; 
+}
 
-.baseline
+.titre
 {
 	display: flex;
 	flex-direction: column;
-	justify-content: space-around;
-	height: 50px;
+	height:50px;
+} 
+
+.titre h1,.titre p
+{
+	height:50%;
+	display: flex;
+	align-items: flex-end;
 }
 
 #search
 {
 	display: flex;
+	height: 60px;
+	align-items: flex-end;
+}
+
+#searchicon
+{
+	display: none;
 }
 
 #marker i
@@ -162,14 +208,9 @@ nav a:hover
 	width: 50px;
 	height: 40px;
 	background-color: #F2F2F2;
-	border-radius: 150px 0px 0px 150px;	
+	border-radius: 15px 0px 0px 15px;	
 	align-items: center;
 	justify-content: space-around;
-}
-
-#searchicon
-{
-	display: none;
 }
 
 #search input
@@ -193,27 +234,20 @@ nav a:hover
 	height: 40px;
 	font-weight: bold;
 	background-color: #0065FC;
-	border-radius: 0px 150px 150px 0px;
+	border-radius: 0px 15px 15px 0px;
 	align-items: center;
 	justify-content: space-around;
 	cursor: pointer;
 }
 
-#search h4:hover
-{
-	color: #0065FC;
-	background-color: #ffffff;
-	border: 1px #0065FC solid;
-}
                                                /*FILTRE*/
 .filterwrapper
 {
 	display: flex;
-	flex-direction: row;
-    flex-wrap: wrap;
+	flex-flow: row wrap;
     justify-content: space-around;
     max-width: 800px;
-    height: 100px;
+    height: 120px;
 }
 
 #titre
@@ -227,7 +261,7 @@ nav a:hover
 	justify-content: space-around;
 	flex-flow: row wrap;
 	align-items: center;
-	align-content: center;
+	align-content: flex-end;
 	width: 100%;
 }
 
@@ -260,11 +294,11 @@ nav a:hover
 	align-items: center; 
 	width: 100%;
 	height: 40px;
-	padding: 0px 15px 0px 50px;
+	padding: 0px 15px 0px 50px; /* Y A T  IL UNE AUTRE METHODE
+	POUR CREER DE L ESPACE ENTRE L ICONE ET LE MOT DU FILTRE ?*/
 	background-color: #ffffff;
 	border-radius: 150px 150px 150px 150px;
 	border : 3px #F2F2F2 solid;
-	justify-content: space-around;
 	position: relative;
 	z-index: 1;
 }
@@ -280,480 +314,111 @@ nav a:hover
 	display: flex;
 	flex-flow: row nowrap;
 	align-items: center;
-	justify-content: flex-start;
 	width: 100%;
 }
 
 #info i
 {
 	display: flex;
-	font-size: 12px;
-	margin: 5px;
-	justify-content: flex-start;
+	justify-content: space-around;
 	align-items: center;
+	font-size: 12px;
 	color: #0065FC;
 	background-color: #ffffff;
 	border: 1px #F2F2F2 solid;
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	justify-content: space-around;
+	margin:5px;/*AUTRE METHODE POUR CREER DE L ESPACE 
+	             ENTRE L ICONE ET LE P ?*/
 }
 
-                                               /*HEBERGEMENT*/
-#global
-{
-	display: inline-flex;
-	width: 100%;
-	height: 550px;
-}
-
-#accomodation
-{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    width: 1000px;
-    height: 100%;
-    margin-right: 25px;
-	background-color: #F2F2F2;
-	border-radius: 15px 15px 15px 15px;
-	position: relative;
-	z-index: 1;
-}
-
-#box1, #box8
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	width: 100%;
-}
-
-#box1 h1, #box8 h2
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	width: 100%;
-	margin: 25px 0px 0px 50px;
-}
-
-#box2, #box3, #box4, #box5, #box6, #box7
-{
-	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	align-content: space-around;
-	flex-wrap: wrap;
-	width: 300px;
-}
-
-#box2 img, #box3 img, #box4 img, #box5 img, #box6 img, #box7 img
-{
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: flex-start;
-	width: 250px;
-	height: 100px;
-	background-color: #ffffff;
-	border-radius: 15px 15px 0px 0px;
-	object-fit: cover;
-}
-
-#box2 i:nth-child(7), #box4 i:nth-child(7), #box5 i:nth-child(7), #box6 i:nth-child(7), #box11 i:nth-child(8), #box12 i:nth-child(7)
-{
-	color: #F2F2F2;
-}
-
-#box5 i:nth-child(6)
-{
-	color: #F2F2F2;
-}
-
-#accomodation figure
-{
-	padding: 0px;
-	margin: 0px;
-	background-color: #ffffff;
-	border: 5px #ffffff solid;
-	border-radius: 15px 15px 15px 15px;
-	box-shadow: 10px 10px 5px 0px #e0e0e0;
-	width: 250px;
-}
-
-#accomodation figure:hover
-{
-	opacity: 0.8;
-}
-
-#accomodation figcaption
-{
-	display: flex;
-	width: 210px;
-	height: 70px;
-	align-content: flex-start;
-	align-items: center;
-	background-color: #ffffff;
-	border-radius: 0px 0px 15px 15px;
-}
-
-#accomodation a
-{
-	text-decoration: none;
-	width: 250px;
-}
-
-#accomodation i
-{
-	display: inline-flex;
-	flex-wrap: nowrap;
-	font-size: 10px;
-	align-content: space-around;
-	color: #0065FC;
-}
-
-#popular
-{
-	display: flex;
-	width: 400px;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	align-content: center;
-	background-color: #F2F2F2;
-	border-radius: 15px 15px 15px 15px;
-}
-
-
-#box9
-{
-    display: flex;
-    flex-direction: row;
-	width: 300px;
-	justify-content: space-between;
-}
-
-#box10, #box11, #box12
-{
-    margin: 0px;
-    padding: 0px;
-    display: flex;
-    flex-direction: row;
-	width: 100%;
-	height: 150px;
-	justify-content: space-between;
-}
-
-#popular figure
-{
-	display: flex;
-	flex-direction: row;
-	width: 300px;
-	height: 120px;
-	background-color: #ffffff;
-	border: 5px #ffffff solid;
-	border-radius: 15px 15px 15px 15px;
-	box-shadow: 10px 10px 5px 0px #e0e0e0
-}
-
-#popular figure:hover
-{
-	opacity: 0.8;
-}
-
-#popular img
-{
-	width: 100px;
-	height: 120px;
-	background-color: #ffffff;
-	border-radius: 15px 0px 0px 15px;
-	object-fit: cover;
-}
-
-#popular figcaption
-{
-	display: flex;
-	flex-wrap: wrap;
-	align-items: center;
-	margin-left: 15px;
-	width: 150px;
-}
-
-#popular a
-{
-	text-decoration: none;
-	width: 210px;
-}
-
-#box10 i, #box11 i, #box12 i
-{
-	display: inline-flex;
-	flex-wrap: nowrap;
-	font-size: 10px;
-	align-content: space-around;
-	color: #0065FC;
-}
-
-#box11 i:nth-child(5) , #box12 i:nth-child(5)
-{
-	color: #F2F2F2;
-}
-
-
-
-                                             /*ACTIVITE*/
-#activities
-{
-	display: flex;
-	flex-wrap: wrap;
-	margin: 0px 0px 50px 0px;
-}
-
-
-#activities h1
-{
-	display: inline-flex;
-    margin: 50px 0px 0px 50px;
-    align-self: flex-start;
-    width: 100%;
-}
-
-.marge
-{
-	margin-left: 10px;
-}
-
-#col1 #col2 #col3 #col4 #activités
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start; 
-	width: 250px;
-	height: 410px;
-}
-
-#tab1, #tab2
-{
-	display: flex;
-	width: 50%;
-}
-
-#tab1 #col1, #tab1 #col2, #tab2 #col3, #tab2 #col4
-
-{
-	justify-content: space-between;
-	align-content: space-between;
-	width: 50%;
-}
-
-
-
-#col1 img, #col2 img, #col3 img, #col4 img
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;	
-	background-color: #ffffff;
-	border-radius: 15px 15px 0px 0px;
-	object-fit: cover;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-}
-
-#col1 img
-{
-	width: 300px;
-	height: 360px;
-}
-
-#col2 img
-{
-	width: 300px;
-	height: 240px;
-}
-
-#col3 img
-{
-	width: 300px;
-	height: 360px;
-}
-
-#col4 img
-{
-	width: 300px;
-	height: 240px;
-}
-
-#col1 figcaption, #col2 figcaption, #col3 figcaption, #col4 figcaption
-{
-	display: flex;
-	width: 300px;
-	height: 50px;
-	align-items: center;	
-	background-color: #ffffff;
-	border-radius: 0px 0px 15px 15px;
-	box-shadow: 10px 10px 5px 0px #F2F2F2;
-}
-
-#col1 a, #col2 a, #col3 a, #col4 a 
-{
-	display: flex;
-	text-decoration: none;
-	width: 300px;
-
-}
-
-#col1 figure:hover, #col2 figure:hover, #col3 figure:hover, #col4 figure:hover
-{
-	opacity: 0.8;
-}
-
-#fort img
-{
-	height: 175px;
-}
-
-#iles img
-{
-	height: 100px;
-}
-
-#dame img
-{
-	height: 130px;
-}
-
-#longchamp img
-{
-	height: 145px;
-}
-
-                                                                /*FOOTER*/
-
-footer 
-{
-	font-family: 'Raleway Regular', sans-serif;
-	display: flex;
-	justify-content: space-between;
-	width: 100%;
-	flex-flow: row wrap;
-	background-color: #F2F2F2;
-
-}
-
-footer ul
-{
-	list-style-type: none;
-	width: 300px;	
-}
-
-footer li
-{
-	margin-bottom: 10px;
-}
-
-footer a
-{
-	font-size: 14px;
-	color: #000000;
-	text-decoration: none;
-}
-
-footer a:hover
-{
-	font-weight: bold;
-}
-
-                                       /*portable*/
+                                       /*RESPONSIVE portable*/
 
 @media screen and (max-width: 680px)
 {
-	body
+	header
 	{
-		margin: 0px;
-		padding:0px;
-	}
-
-	.container
-	{
-		display: flex;
-		width: 100%;
-		flex-direction: column;
-		justify-content: center;
+		height: 150px;
+		/*SI JE N APPLIQUE PAS UNE TAILLE SUPERIEURE,
+		LA DIV "TITRE"  VA CHEVAUCHER L UL, AUTRE METHODE POSSIBLE ?*/
 	}
 
 	nav
-	{ 
+	{
 		display: flex;
-		flex-direction: row;
+		flex-flow: row wrap;
 		width: 100%;
+		height: 100px;
 	}
 
-	#menu
+	img
+	{
+		position: absolute;
+	}
+
+	#logo
 	{
 		display: flex;
-		flex-direction: row;
+		align-items: flex-end;
 	}
 
-	#menu div
+	#inscription
 	{
-		display: flex;
-		order: 2;
-		justify-content: flex-end;
+		width: 90%;
+		/*SI JE LAISSE LA TAILLE A 100%,
+		"S INSCRIRE" EST COLLE A L ECRAN*/
 	}
 
-	#menu img
-	{
-		display: flex;
-		order: 1;
-		justify-content: flex-start;
-	}
-
-	#menu img div
-	{
-		display: inline-flex;
-		flex-direction: row;
-		align-content: flex-start;
-	}
+	#inscription a:hover
+    {
+	    border-top: none;
+    }
 
 	nav ul
 	{
-	display: inline-flex;
-	flex-direction: row;
+	display: flex;
     width: 100%;
-    justify-content: center;
-    border-bottom: 3px solid #F2F2F2;
-    padding-bottom: 3px;
-    order: 3;
+    justify-content: space-around;
+    align-items: center;
+    order: 1;
+    position: relative;
 	}
 
-	#searchwrapper
+	.barreG a:hover, .barreD a:hover
+	{
+		border-top: none;
+	}
+
+	.barreG, .barreD
+	{
+	    border-bottom: 3px solid #F2F2F2;
+	    width: 50%;	
+	}
+
+	.barreG a, .barreD a
 	{
 		display: flex;
-		flex-direction: column;
-		justify-content: flex-start;
-		align-content: space-between;
-		height: 100%;
-		width: 320px;
+		justify-content: center;
+		padding-bottom: 15px; /*autre solution ?*/
 	}
 
-	.baseline
+	.barreG:hover, .barreD:hover
 	{
-		height: 150px;
+		border-bottom: 3px solid #0065FC;
 	}
 
-	.baseline h1
-	{
-		font-size: 22px;
-	}
+	/* COMMENT PUIS JE REGLER LA LARGEUR DE LA BARRE AU SURVOL ? */
 
-	.baseline p
+	#search 	/*J AI REUSSI FAIRE PASSER L ICONE LOUPE
+	AU DESSUS DE LA CASE INPUT, PAR CONTRE JE NE PARVIENS PAS 
+	A LE REPLACER AU BON ENDROIT SANS UTILISER UNE MARGE NEGATIVE.
+	DANS QUELLE DIRECTION DOIS-JE CHERCHER ?*/
 	{
-		font-size: 16px;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		align-self: flex-start;
 	}
 
 	#search h4
@@ -768,7 +433,7 @@ footer a:hover
 
 	#searchicon i
 	{
-		display: flex;
+		display: inline-flex;
 	    color: #ffffff;
 	    width:45px;
 	    height: 40px;
@@ -778,6 +443,14 @@ footer a:hover
 	    align-items: center;
 	    justify-content: space-around;
 	    cursor: pointer;
+	    position: absolute;
+	    z-index: 1;
+	}
+
+	#marker
+	{
+		position: relative;;
+		z-index: 0;
 	}
 
 	#searchicon i:hover
@@ -787,291 +460,21 @@ footer a:hover
 	    border: 1px #0065FC solid;
 	}
 
-	#search
+	.filterwrapper /*COMMENT PUIS JE CREER DE L ESPACE ENTRE LES CELLULES
+	LORSQU ELLES PASSENT SUR 2 LIGNES EN MODE RESPONSIVE ?*/
 	{
-		width: 100%;
-	}
-
-	#filterwrapper
-	{
-		display: flex;
-		width: 100%;
-		flex-direction: row;
-		justify-content: space-between;
-	}
-
-	#filter
-	{
-		display: flex;
-		flex-direction: row;
+		height:150px;
 	}
 
 	#info
 	{
-		display: flex;
-		height: 100%;
-		width: 100%;
-
-	}
-
-	#global
-	{
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 100%;
-	}
-
-	#popular
-	{
-		margin: 0px;
-		padding: 0px;
-	    display: flex;
-	    height: 100%;
-	    background-color: #F2F2F2;
-	    border-radius: 0px 0px 0px 0px;
-	}
-
-	#accomodation
-	{
-	    background-color: #ffffff;
-	    margin: 0px;
-		padding: 0px;
-		display: flex;
-		flex-direction: column;
-		align-content: flex-start;
-		align-items: flex-start;
-	    width: 320px;
-	    order: 1;
-	}
-
-	#accomodation figure, #accomodation img, #accomodation figcaption
-	{
-		width: 300px;
-	}
-
-	#box2, #box3, #box4, #box5, #box6, #box7
-	{
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		width: 100%;
-		height: 200px;
-	}
-
-	#activities
-	{
-		margin: 0px;
-		padding: 0px;
-		display: flex;
-		flex-direction: column;
-	}
-
-	#tab1, #tab2
-	{
-		display: flex;
-		flex-direction: column;
-	}
-
-    #activities h1
-    {
-    	    margin: 20px 0px 0px 50px;
-    }
-	#activities img
-	{
-		height: 140px;
-	}
-
-	footer
-	{
-		width: 100%;
+		height: 50px;
 	}
 }
-                         /*tablette*/
+
+
+                         /*RESPONSIVE tablette*/
 
 @media screen and (min-width: 681px) and (max-width: 1024px)
 {
-	header
-	{
-
-	}
-
-	nav
-	{ 
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-	}
-
-	#menu
-	{
-		display: flex;
-		flex-direction: row;
-	}
-
-	#menu div
-	{
-		display: flex;
-		order: 2;
-		justify-content: flex-end;
-	}
-
-	#menu img
-	{
-		display: flex;
-		order: 1;
-		justify-content: flex-start;
-	}
-
-	#menu img div
-	{
-		display: inline-flex;
-		flex-direction: row;
-		align-content: flex-start;
-	}
-
-	nav ul
-	{
-	margin: 0px;
-	padding: 0px;
-	display: inline-flex;
-	flex-direction: row;
-	flex-wrap: wrap;
-    width: 100%;
-    justify-content: center;
-    border-bottom: 3px solid #F2F2F2;
-    order: 2;
-	}
-
-	#search h4
-	{
-		display: none;
-	}
-
-	#searchicon
-	{
-		display: contents;
-	}
-
-	#searchicon i
-	{
-		display: flex;
-	    color: #ffffff;
-	    width:45px;
-	    height: 40px;
-	    font-weight: bold;
-	    background-color: #0065FC;
-	    border-radius: 15px 15px;
-	    align-items: center;
-	    justify-content: space-around;
-	    cursor: pointer;
-	}
-
-	#searchicon i:hover
-	{
-		color: #0065FC;
-	    background-color: #ffffff;
-	    border: 1px #0065FC solid;
-	}
-
-	#global
-	{
-		display: flex;
-		flex-direction: column;
-		width: 100%;
-		height: 100%;
-	}
-
-	#accomodation
-	{
-		display: flex;
-		flex-direction: row;
-		width: 100%;
-		align-content: space-between;
-		order: 1;
-	}
-
-	#box2, #box3, #box4
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-	    align-items: center;
-	    align-content: space-around;
-	    flex-wrap: wrap;
-		width: 100%;
-
-	}
-
-	#box5, #box6, #box7
-	{
-		display: flex;
-		flex-direction: row;
-		justify-content: flex-start;
-		align-items: center;
-		align-content: space-around;
-		width: 100%;
-	}
-
-	#popular
-	{
-		margin: 0px;
-		padding: 0px;
-	    display: flex;
-	    flex-flow: row wrap;
-	    height: 100%;
-	    width: 100%;
-	    background-color: #F2F2F2;
-	}
-
-	#box9
-	{
-
-		margin-top: 20px;
-		width: 90%;
-	}
-
-	#box10, #box11, #box12
-	{
-
-
-	}
-
-	#accomodation
-	{
-		background-color: #fff;
-		display: flex;
-		flex-flow: row wrap;
-		width: 100%;
-	}
-
-	#box1, #box8
-	{
-		height: 80px;
-	}
-
-	#box2, #box3, #box4, #box5, #box6, #box7
-	{
-		display: flex;
-		flex-direction: column;
-		width: 50%;
-		height: 200px;
-	}
-
-	#activities h1
-	{
-		margin: 0px 0px 0px 50px;
-	}
-
-	#activities img
-	{
-		height: 140px;
-	}
-
-	#tab1, #tab2
-	{
-		display: flex;
-		flex-direction: column;
-
-	}
 }

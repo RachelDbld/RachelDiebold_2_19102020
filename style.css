@@ -339,18 +339,18 @@ nav ul
 {
 	display: inline-flex;
 	width: 100%;
-	height: 550px;
+	height: 600px;
 	justify-content: space-between;
 }
 
 #accomodation
 {
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
     justify-content: center;
     align-items: center;
+    align-content: space-between;
 	width: 65%;
-	height: 100%;
 	background-color: #F2F2F2;
 	border-radius: 15px;
 }
@@ -363,43 +363,27 @@ nav ul
 #box1, #box8
 {
 	width: 90%;
+	height: 10%;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
 }
 
-/*#box1 h1, #box8 h2
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: flex-start;
-	width: 100%;
-}*/
-
-#vignettes
-{
-	width: 90%;
-	height: 75%;
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: space-around;
-	align-items: center;
-	align-content: space-between;
-}
-
-#vignettes figure
+#accomodation figure
 {
 	background-color: #ffffff;
 	border: 5px #ffffff solid;
 	border-radius: 15px 15px 15px 15px;
 	box-shadow: 10px 10px 5px 0px #e0e0e0;
+	width: 250px;
 }
 
-#vignettes figure:hover
+#accomodation figure:hover
 {
 	opacity: 0.8;
 }
 
-#vignettes i
+#accomodation i
 {
 	font-size: 12px;
 	color: #0065FC;
@@ -411,7 +395,7 @@ nav ul
 	line-height: 120%;
 }
 
-#vignettes figcaption
+#accomodation figcaption
 {
 	display: flex;
 	width: 210px;
@@ -426,10 +410,11 @@ nav ul
 {
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
+	justify-content: center;
 	align-items: center;
 	align-content: space-around;
 	flex-wrap: wrap;
+	width: 300px;
 }
 
 #box2 img, #box3 img, #box4 img, #box5 img, #box6 img, #box7 img
@@ -592,8 +577,11 @@ nav ul
 	.filterwrapper /*COMMENT PUIS JE CREER DE L ESPACE ENTRE LES CELLULES
 	LORSQU ELLES PASSENT SUR 2 LIGNES EN MODE RESPONSIVE ?*/
 	{
-		height:150px;
 		display: flex;
+		width: 100%;
+		height: 100%;
+		flex-direction: row;
+		justify-content: space-between;
 	}
 
 	#filter
@@ -617,45 +605,12 @@ nav ul
 
 	#info
 	{
-		height: 50px;
-	}
-
-	/*SECTION HEBERGEMENT*/
-
-	#global
-	{
 		display: flex;
-		flex-direction: column;
-		width: 100%;
 		height: 100%;
+		width: 100%;	
 	}
 
-	#accomodation
-	{
-		display: flex;
-		flex-wrap: wrap;
-		width: 100%;
-		background-color: #fff;
-		order: 1;
-	}
 
-	#vignettes
-	{
-		display: flex;
-		flex-flow: column wrap;
-		justify-content: center;
-		align-content: center;
-	}
-
-	#box1, #box8
-{
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	align-items: 
-}
 
 	#popular
 	{
@@ -679,23 +634,33 @@ nav ul
 	width: 100%;
 	height: 1500px;
 	justify-content: space-between;
-}
+   }
 
    #accomodation
    {
 	display: flex;
 	flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 	width: 100%;
 	height: 55%;
 	order: 1;
    }
 
-   #box1, #box8
+   #box1 h1, #box8 a
    {
-   	width: 75%;
+   	display: flex;
+   	justify-content: center;
+   	align-items: center;
+   	align-content: center;
+   	height: 50px;
+   	width: 100%;
    }
+
+   	#box2, #box3, #box4, #box5, #box6, #box7
+	{
+		width: 50%;
+		height: 200px;
+	}
 
    #popular
    {

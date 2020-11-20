@@ -90,12 +90,14 @@ h4
 	color: #000000;
 }
 
+
 .container
 {
 	max-width: 1450px;
 	margin: auto;
 	display: flex;
 	flex-direction: column;
+
 }
 
                                                    /*HEADER*/
@@ -360,13 +362,22 @@ nav ul
 	text-decoration: none;
 }
 
-#box1, #box8
+#box1
 {
 	width: 90%;
 	height: 10%;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: flex-end;
+}
+
+#box8
+{
+	width: 90%;
+	height: 10%;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
 }
 
 #accomodation figure
@@ -375,7 +386,7 @@ nav ul
 	border: 5px #ffffff solid;
 	border-radius: 15px 15px 15px 15px;
 	box-shadow: 10px 10px 5px 0px #e0e0e0;
-	width: 250px;
+	width: 230px;
 }
 
 #accomodation figure:hover
@@ -414,7 +425,8 @@ nav ul
 	align-items: center;
 	align-content: space-around;
 	flex-wrap: wrap;
-	width: 300px;
+	width: 250px;
+	height: 180px;
 }
 
 #box2 img, #box3 img, #box4 img, #box5 img, #box6 img, #box7 img
@@ -424,7 +436,7 @@ nav ul
 	flex-wrap: wrap;
 	justify-content: center;
 	align-content: flex-start;
-	width: 250px;
+	width: 230px;
 	height: 100px;
 	background-color: #ffffff;
 	border-radius: 15px 15px 0px 0px;
@@ -440,12 +452,92 @@ nav ul
 {
 	color: #F2F2F2;
 }
-
+                                    /*LES PLUS POPULAIRES*/
 #popular
 {
 	width: 30%; 
 	background-color: #F2F2F2;
 	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+#box9
+{
+    display: flex;
+    flex-direction: row;
+	width: 80%;
+	height:10%;
+	justify-content: space-between;
+}
+
+#box10, #box11, #box12
+{
+    display: flex;
+    flex-direction: row;
+	width: 80%;
+	height: 25%;
+	justify-content: space-between;
+}
+
+#popular figure
+{
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: 80%;
+	background-color: #ffffff;
+	border: 5px #ffffff solid;
+	border-radius: 15px 15px 15px 15px;
+	box-shadow: 10px 10px 5px 0px #e0e0e0
+}
+
+#popular figure:hover
+{
+	opacity: 0.8;
+}
+
+#popular img
+{
+	width: 100px;
+	height: 120px;
+	background-color: #ffffff;
+	border-radius: 15px 0px 0px 15px;
+	object-fit: cover;
+}
+
+#popular figcaption
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-content: center;
+	align-items: flex-start;
+	width: 60%;
+}
+
+#popular a
+{
+	text-decoration: none;
+	width: 100%;
+	height: 100%;
+}
+
+#box10 i, #box11 i, #box12 i
+{
+	display: inline-flex;
+	flex-wrap: nowrap;
+	font-size: 10px;
+	align-content: space-around;
+	color: #0065FC;
+}
+
+#box11 i:nth-child(5) , #box12 i:nth-child(5)
+{
+	color: #F2F2F2;
 }
 
                                        /*RESPONSIVE portable*/
@@ -470,7 +562,7 @@ nav ul
 		height: 100px;
 	}
 
-	img
+	header img
 	{
 		position: absolute;
 	}
@@ -610,22 +702,42 @@ nav ul
 		width: 100%;	
 	}
 
+	#global
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		height: 100%;
+	}
 
+	#accomodation
+	{
+		display: flex;
+		flex-flow: row wrap;
+		justify-content: center;
+        align-items: center;
+        align-content: space-between;
+		width: 100%;
+		height: 100%;
+		order:2;
+	}
 
 	#popular
 	{
 	    display: flex;
 	    flex-flow: row wrap;
-	    height: 100%;
-	    width: 100%;
 	    background-color: #F2F2F2;
+	    width: 100%;
+	    height: 100%;
+	    border-radius: 0px;
+	    order: 1;
 	}
 }
 
 
-                         /*RESPONSIVE tablette*/
+                         RESPONSIVE tablette/portable
 
-@media screen and (min-width: 681px) and (max-width: 1024px)
+@media screen and (max-width: 1024px)
 {
    #global
    {
@@ -639,28 +751,14 @@ nav ul
    #accomodation
    {
 	display: flex;
-	flex-wrap: wrap;
+	flex-flow: row wrap;
+	justify-content: center;
     align-items: center;
-	width: 100%;
-	height: 55%;
+    align-content: space-between;
+	width: 65%;
+	height: 800px;
 	order: 1;
    }
-
-   #box1 h1, #box8 a
-   {
-   	display: flex;
-   	justify-content: center;
-   	align-items: center;
-   	align-content: center;
-   	height: 50px;
-   	width: 100%;
-   }
-
-   	#box2, #box3, #box4, #box5, #box6, #box7
-	{
-		width: 50%;
-		height: 200px;
-	}
 
    #popular
    {

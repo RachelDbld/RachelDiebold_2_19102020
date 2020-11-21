@@ -107,9 +107,6 @@ header
 	justify-content: space-between;
 	align-items: center;
 	width: 100%;
-	height: 100px; 
-/*Y A T IL UNE AUTRE METHODE POUR CREER DES ESPACES
-PLUTOT QUE DE METTRE UNE HAUTEUR ?*/
 }
 
 nav
@@ -137,8 +134,6 @@ nav ul
 	color: #000000;
 	text-decoration: none;
 	padding-top: 25px;
-	/* Y A T IL UNE AUTRE METHODE POUR CREER DE L ESPACE
-	ENTRE LE MOT ET SON BORDER ?*/ 
 }
 
 .barreG a:hover, .barreD a:hover
@@ -176,27 +171,21 @@ nav ul
 {
 	display: flex;
 	flex-direction: column;
+	margin-top: 20px;
 }
 
-.titre
+.baseline
 {
 	display: flex;
 	flex-direction: column;
-	height:50px;
+	line-height: 150%;
 } 
-
-.titre h1,.titre p
-{
-	height:50%;
-	display: flex;
-	align-items: flex-end;
-}
 
 #search
 {
 	display: flex;
-	height: 60px;
 	align-items: flex-end;
+	margin-top: 20px;
 }
 
 #searchicon
@@ -297,8 +286,7 @@ nav ul
 	align-items: center; 
 	width: 100%;
 	height: 40px;
-	padding: 0px 15px 0px 50px; /* Y A T  IL UNE AUTRE METHODE
-	POUR CREER DE L ESPACE ENTRE L ICONE ET LE MOT DU FILTRE ?*/
+	padding: 0px 15px 0px 50px;
 	background-color: #ffffff;
 	border-radius: 150px 150px 150px 150px;
 	border : 3px #F2F2F2 solid;
@@ -332,32 +320,34 @@ nav ul
 	width: 20px;
 	height: 20px;
 	border-radius: 50%;
-	margin:5px;/*AUTRE METHODE POUR CREER DE L ESPACE 
-	             ENTRE L ICONE ET LE P ?*/
+	margin:5px;
 }
 
                                                /*HEBERGEMENT*/
 #global
 {
 	display: inline-flex;
-	width: 100%;
-	height: 600px;
-	justify-content: space-between;
+	justify-content: space-around;
 }
 
-#accomodation
+#accommodation
 {
 	display: flex;
 	flex-flow: row wrap;
     justify-content: center;
     align-items: center;
     align-content: space-between;
-	width: 65%;
+	max-width: 65%;
 	background-color: #F2F2F2;
 	border-radius: 15px;
 }
 
-#accomodation a
+#accommodation > div
+{
+	margin: 15px 10px 10px 10px;
+}
+
+#accommodation a
 {
 	text-decoration: none;
 }
@@ -365,7 +355,6 @@ nav ul
 #box1
 {
 	width: 90%;
-	height: 10%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
@@ -374,13 +363,12 @@ nav ul
 #box8
 {
 	width: 90%;
-	height: 10%;
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
 }
 
-#accomodation figure
+#accommodation figure
 {
 	background-color: #ffffff;
 	border: 5px #ffffff solid;
@@ -389,12 +377,12 @@ nav ul
 	width: 230px;
 }
 
-#accomodation figure:hover
+#accommodation figure:hover
 {
 	opacity: 0.8;
 }
 
-#accomodation i
+#accommodation i
 {
 	font-size: 12px;
 	color: #0065FC;
@@ -406,7 +394,7 @@ nav ul
 	line-height: 120%;
 }
 
-#accomodation figcaption
+#accommodation figcaption
 {
 	display: flex;
 	width: 210px;
@@ -425,8 +413,6 @@ nav ul
 	align-items: center;
 	align-content: space-around;
 	flex-wrap: wrap;
-	width: 250px;
-	height: 180px;
 }
 
 #box2 img, #box3 img, #box4 img, #box5 img, #box6 img, #box7 img
@@ -455,14 +441,19 @@ nav ul
                                     /*LES PLUS POPULAIRES*/
 #popular
 {
-	width: 30%; 
+	max-width: 30%; 
 	background-color: #F2F2F2;
 	border-radius: 15px;
 	display: flex;
 	flex-direction: column;
-	justify-content: center;
+	justify-content: space-around;
 	align-items: center;
 	align-content: center;
+}
+
+#popular > div
+{
+	margin: 15px 10px 10px 10px;
 }
 
 #box9
@@ -470,7 +461,6 @@ nav ul
     display: flex;
     flex-direction: row;
 	width: 80%;
-	height:10%;
 	justify-content: space-between;
 }
 
@@ -479,16 +469,18 @@ nav ul
     display: flex;
     flex-direction: row;
 	width: 80%;
-	height: 25%;
 	justify-content: space-between;
+}
+
+.titre
+{
+	line-height: 150%;
 }
 
 #popular figure
 {
 	display: flex;
 	flex-direction: row;
-	width: 100%;
-	height: 80%;
 	background-color: #ffffff;
 	border: 5px #ffffff solid;
 	border-radius: 15px 15px 15px 15px;
@@ -512,18 +504,15 @@ nav ul
 #popular figcaption
 {
 	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-content: center;
-	align-items: flex-start;
-	width: 60%;
+	flex-wrap: wrap;
+	align-items: center;
+	margin-left: 15px;
+	width: 50%;
 }
 
 #popular a
 {
 	text-decoration: none;
-	width: 100%;
-	height: 100%;
 }
 
 #box10 i, #box11 i, #box12 i
@@ -542,7 +531,7 @@ nav ul
 
                                        /*RESPONSIVE portable*/
 
-@media screen and (max-width: 680px)
+@media screen and (max-width: 769px)
 {
 
 	/*HEADER*/
@@ -550,8 +539,6 @@ nav ul
 	header
 	{
 		height: 150px;
-		/*SI JE N APPLIQUE PAS UNE TAILLE SUPERIEURE,
-		LA DIV "TITRE"  VA CHEVAUCHER L UL, AUTRE METHODE POSSIBLE ?*/
 	}
 
 	nav
@@ -576,8 +563,6 @@ nav ul
 	#inscription
 	{
 		width: 90%;
-		/*SI JE LAISSE LA TAILLE A 100%,
-		"S INSCRIRE" EST COLLE A L ECRAN*/
 	}
 
 	#inscription a:hover
@@ -610,7 +595,7 @@ nav ul
 	{
 		display: flex;
 		justify-content: center;
-		padding-bottom: 15px; /*autre solution ?*/
+		padding-bottom: 15px;
 	}
 
 	.barreG:hover, .barreD:hover
@@ -620,22 +605,36 @@ nav ul
 
 	/*SECTION RECHERCHE*/
 
-	#search 	/*JE NE PARVIENS PAS A RENDTRE CETTE PARTIE RESPONSIVE
-	             ET A CALER CORRECTEMENT L INPUT ET L ICONE*/
+	.searchwrapper
 	{
+		margin:0px;
+	}
+
+	#search
+	{
+		position: relative;
 		display: flex;
-		width: 100%;
+		justify-content: center;
 	}
 
 	#search input
 	{
 		border-right: none;
 		border-left: none;
+		width: 220px;
+		height: 50px;
+		font-size: 16px;
 	}
 
 	#search h4
 	{
 		display: none;
+	}
+
+	#marker i
+	{
+		width: 60px;
+		height: 50px;
 	}
 
 	#searchicon
@@ -647,14 +646,16 @@ nav ul
 	{
 		display: inline-flex;
 	    color: #ffffff;
-	    width:45px;
-	    height: 40px;
+	    width:55px;
+	    height: 50px;
 	    font-weight: bold;
 	    background-color: #0065FC;
 	    border-radius: 15px 15px;
 	    align-items: center;
 	    justify-content: space-around;
 	    cursor: pointer;
+	    position: absolute;
+	    margin-left: 240px;
 	}
 
 	#searchicon i:hover
@@ -666,8 +667,7 @@ nav ul
 
 	/*FILTRE*/
 
-	.filterwrapper /*COMMENT PUIS JE CREER DE L ESPACE ENTRE LES CELLULES
-	LORSQU ELLES PASSENT SUR 2 LIGNES EN MODE RESPONSIVE ?*/
+	.filterwrapper
 	{
 		display: flex;
 		width: 100%;
@@ -683,23 +683,26 @@ nav ul
 		justify-content: space-around;
 	}
 
+	#filter h2, #filter h3
+	{
+		font-size: 16px;
+	}
+
 	#titre
 	{
 		width: 100%;
 		height: 25px;
-		padding-top: 15px; /* AUTRE SOLUTION ? */
+		padding-top: 15px;
 	}
 
 	.money, .child, .heart, .dog
 	{
-		padding-bottom: 15px; /* AUTRE SOLUTION ? */
+		padding-bottom: 15px;
 	}
 
-	#info
+	#info i, #info p
 	{
-		display: flex;
-		height: 100%;
-		width: 100%;	
+		font-size: 16px;
 	}
 
 	#global
@@ -707,18 +710,18 @@ nav ul
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 100%;
 	}
 
-	#accomodation
+	#accommodation
 	{
 		display: flex;
 		flex-flow: row wrap;
 		justify-content: center;
         align-items: center;
         align-content: space-between;
-		width: 100%;
-		height: 100%;
+		max-width: 100%;
+		background-color: #fff;
+		margin-top: 30px;
 		order:2;
 	}
 
@@ -727,17 +730,55 @@ nav ul
 	    display: flex;
 	    flex-flow: row wrap;
 	    background-color: #F2F2F2;
-	    width: 100%;
-	    height: 100%;
+	    max-width: 100%;
 	    border-radius: 0px;
 	    order: 1;
+	}
+
+	#box10, #box11, #box12
+	{
+		width:60%;
+	}
+
+	#box10 i, #box11 i, #box12 i
+	{
+		font-size: 14px;
+	}
+
+	#popular figure
+	{
+		width: 100%;
+	}
+
+	#popular figcaption
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-start;
+		height: 100%;
+	}
+
+
+
+	#popular a
+	{
+		width: 100%;
+	}
+
+	.titre
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		width: 130px;
 	}
 }
 
 
                          RESPONSIVE tablette/portable
 
-@media screen and (max-width: 1024px)
+@media screen and (min-width: 770px) and (max-width: 1024px)
 {
    #global
    {
@@ -748,7 +789,7 @@ nav ul
 	justify-content: space-between;
    }
 
-   #accomodation
+   #accommodation
    {
 	display: flex;
 	flex-flow: row wrap;
@@ -757,12 +798,68 @@ nav ul
     align-content: space-between;
 	width: 65%;
 	height: 800px;
-	order: 1;
+	order: 2;
    }
 
    #popular
    {
-   	width: 100%;
-   	height: 40%;
+   	display: flex;
+	flex-flow: row wrap;
+	background-color: #F2F2F2;
+	max-width: 100%;
+	border-radius: 0px;
+	order: 1;
    }
-}
+
+   	#box10, #box11, #box12
+	{
+		width:60%;
+	}
+
+	#box10 i, #box11 i, #box12 i
+	{
+		font-size: 14px;
+	}
+
+	#popular figure
+	{
+		width: 100%;
+	}
+
+	#popular figcaption
+	{
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	#popular img
+	{
+		width: 180px;
+
+	}
+
+	#popular a
+	{
+		width: 100%;
+	}
+
+	.titre
+	{
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
+		width: 180px;
+	}
+
+	.titre h1
+	{
+		font-size: 22px;
+	}
+
+	.titre p
+	{
+		font-size: 18px;
+	}

@@ -491,7 +491,7 @@ nav ul
 	flex-direction: row;
 }
 
-.image1, .image2, .image3
+.image7, .image8, .image9
 {
 	width: 50%;
 	height: 100%;
@@ -502,17 +502,17 @@ nav ul
 	background-repeat: no-repeat;
 }
 
-.image1
+.image7
 {
 	background-image: url("./Images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
 }
 
-.image2
+.image8
 {
 	background-image: url("./Images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
 }
 
-.image3
+.image9
 {
 	background-image: url("./Images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
 }
@@ -529,7 +529,7 @@ nav ul
 	margin-top: 0.5rem;
 }
 
-.texte1, .texte2, .texte3
+.texte7, .texte8, .texte9
 {
     width: 9rem;
 	height: 5.25rem;
@@ -801,7 +801,7 @@ nav ul
 		font-size: 1rem;
 	}
 
-	.texte1, .texte2, .texte3
+	.texte7, .texte8, .texte9
 	{
 		width: 100%;
 	}

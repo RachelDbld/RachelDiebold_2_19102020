@@ -46,7 +46,7 @@ table {
 
 @font-face {
 	font-family: Raleway;
-	src: url ("C:\Users\axiau\Desktop\P2_DIEBOLD_RACHEL\Raleway\static");
+	src: url("./P2_DIEBOLD_RACHEL/Raleway/static");
 }
 
 body
@@ -58,35 +58,35 @@ body
 p
 {
 	font-family: 'Raleway Medium', sans-serif;
-	font-size: 0.875rem;
+	font-size: 0.9rem;
 	color: #000000;
 }
 
 h1
 {
 	font-family: 'Raleway ExtraBold', sans-serif;
-	font-size: 1.125rem;
+	font-size: 1.1rem;
 	color: #000000;
 }
 
 h2
 {
 	font-family: 'Raleway ExtraBold', sans-serif;
-	font-size:0.875rem;
+	font-size:1rem;
 	color: #000000;
 }
 
 h3
 {
 	font-family: 'Raleway ExtraBold', sans-serif;
-	font-size:13px;
+	font-size:0.9rem;
 	color: #000000;
 }
 
 h4
 {
 	font-family: 'Raleway Regular', sans-serif;
-	font-size:0.813rem;
+	font-size:0.8rem;
 	color: #000000;
 }
 
@@ -116,7 +116,6 @@ nav
 	flex-flow: row wrap;
 	justify-content: center;
 	width: 31.25rem;
-	font-family: 'Raleway Medium';
 }
 
 nav ul
@@ -131,10 +130,11 @@ nav ul
 
 .barreG a, .barreD a
 {
-	font-size: 0.875rem;
+	font-family: 'Raleway Medium';
+	font-size: 0.9rem;
 	color: #000000;
 	text-decoration: none;
-	padding-top: 1.563rem;
+	padding-top: 1.3rem;
 }
 
 .barreG a:hover, .barreD a:hover
@@ -152,7 +152,8 @@ nav ul
 
 #inscription a
 {	
-	font-size: 0.875rem;
+	font-family: 'Raleway Regular';
+	font-size: 0.9rem;
 	color: #0065FC;
 	font-weight: bold;
 	text-decoration: none;
@@ -232,6 +233,13 @@ nav ul
 	cursor: pointer;
 }
 
+#search h4:hover
+{
+	background-color: #fff;
+	color: #0065FC;
+	border: 0.06rem solid #0065FC;
+}
+
                                                /*FILTRE*/
 .filterwrapper
 {
@@ -277,7 +285,12 @@ nav ul
 	background-color: #ffffff;
 	border: 0.06rem #0065FC dashed;
 	cursor: pointer;
-	transform: rotate(0deg) translateX(10px);
+}
+
+#filter h3:hover
+{
+	border : 0.06rem #0065FC solid;
+	border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
 }
 
 #filter h3
@@ -336,20 +349,24 @@ nav ul
 	flex-flow: row wrap;
     justify-content: center;
     align-items: center;
-    align-content: space-between;
+    align-content: space-around;
 	max-width: 65%;
 	background-color: #F2F2F2;
 	border-radius: 0.9rem;
 }
 
-#accommodation > div
-{
-	margin: 0.9rem 0.6rem 0.6rem 0.6rem;
-}
-
 #accommodation a
 {
 	text-decoration: none;
+	background-color: #fff;
+	border-radius: 1rem;
+	box-shadow: 0.6rem 0.06rem 0.3rem 0rem #e0e0e0;
+	margin: 1rem;
+}
+
+#accommodation a:hover
+{
+	opacity: 0.8;
 }
 
 #box1
@@ -358,6 +375,7 @@ nav ul
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
+	margin-top: 0.9rem;
 }
 
 #box8
@@ -368,76 +386,104 @@ nav ul
 	justify-content: flex-start;
 }
 
-#accommodation figure
+#box8 a
 {
-	background-color: #ffffff;
-	border: 0.3rem #ffffff solid;
-	border-radius: 0.9rem;
-	box-shadow: 0.6rem 0.6rem 0.3rem 0rem #e0e0e0;
-	width: 14.375rem;
-}
-
-#accommodation figure:hover
-{
-	opacity: 0.8;
-}
-
-#accommodation i
-{
-	font-size: 0.8rem;
-	color: #0065FC;
-}
-
-.marge
-{
-	margin-left: 0.6rem;
-	line-height: 120%;
-}
-
-#accommodation figcaption
-{
-	display: flex;
-	width: 13.125rem;
-	height: 4.375;
-	align-content: flex-start;
-	align-items: center;
-	background-color: #ffffff;
-	border-radius: 0rem 0rem 0.9rem 0.9rem;
+	text-decoration: none;
+	background-color: transparent;
+	border-radius: 0rem;
+	box-shadow: none;
+	margin: 0rem 0rem 0.9rem 0rem;
 }
 
 #box2, #box3, #box4, #box5, #box6, #box7
 {
+	width: 15rem;
+	height: 10.5rem;
+	border: 0.3rem #ffffff solid;
+	border-radius: 0.9rem;
+	
 	display: flex;
 	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	align-content: space-around;
 	flex-wrap: wrap;
 }
 
-#box2 img, #box3 img, #box4 img, #box5 img, #box6 img, #box7 img
+
+#image1, #image2, #image3, #image4, #image5, #image6
 {
-	display: flex;
-	flex-direction: column;
-	flex-wrap: wrap;
-	justify-content: center;
-	align-content: flex-start;
-	width: 14.375rem;
-	height: 6.25rem;
-	background-color: #ffffff;
+	width: 100%;
+	height: 60%;
 	border-radius: 0.9rem 0.9rem 0rem 0rem;
-	object-fit: cover;
+	
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-#box2 i:nth-child(7), #box4 i:nth-child(7), #box5 i:nth-child(7), #box6 i:nth-child(7), #box11 i:nth-child(8), #box12 i:nth-child(7)
+
+#image1
+{
+	background-image: url("./Images/hebergements/4_small/marcus-loke-WQJvWU_HZFo-unsplash.jpg");
+}
+
+#image2
+{
+
+	background-image: url("./Images/hebergements/4_small/fred-kleber-gTbaxaVLvsg-unsplash.jpg");
+}
+
+#image3
+{
+
+	background-image: url("./Images/hebergements/4_small/reisetopia-B8WIgxA_PFU-unsplash.jpg");
+}
+
+#image4
+{
+
+	background-image: url("./Images/hebergements/4_small/annie-spratt-Eg1qcIitAuA-unsplash.jpg");
+}
+
+#image5
+{
+
+	background-image: url("./Images/hebergements/4_small/nicate-lee-kT-ZyaiwBe0-unsplash.jpg");
+}
+
+#image6
+{
+
+	background-image: url("./Images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
+}
+
+.legendleft
+{
+	margin-left: 0.5rem;
+}
+
+.legendleft p
+{
+	margin-top: 0.3rem;
+}
+
+.stars
+{
+	margin-top: 0.6rem;
+}
+
+#box2 i, #box3 i, #box4 i, #box5 i, #box6 i, #box7 i
+{
+	display: inline-flex;
+	flex-wrap: nowrap;
+	font-size: 0.75rem;
+	align-content: space-around;
+	color: #0065FC;
+}
+
+#box2 i:nth-child(5), #box4 i:nth-child(5), #box5 i:nth-child(4), #box5 i:nth-child(5), #box6 i:nth-child(5), #box11 i:nth-child(8), #box12 i:nth-child(7)
 {
 	color: #F2F2F2;
 }
 
-#box5 i:nth-child(6)
-{
-	color: #F2F2F2;
-}
                                     /*LES PLUS POPULAIRES*/
 #popular
 {
@@ -449,12 +495,6 @@ nav ul
 	justify-content: space-around;
 	align-items: center;
 	align-content: center;
-	padding: 1rem;
-}
-
-#popular > div 
-{
-	margin: 0.9rem 0.6rem 0.6rem 0.6rem;
 }
 
 #box9
@@ -463,6 +503,12 @@ nav ul
     flex-direction: row;
 	width: 80%;
 	justify-content: space-between;
+	margin-top: 1rem;
+}
+
+#box9 i
+{
+	font-size: 1.1rem;
 }
 
 #popular a
@@ -482,16 +528,15 @@ nav ul
 
 #box10, #box11, #box12
 {
-	width: 15rem;
-	height: 7.5rem;
+	width: 18rem;
+	height: 8rem;
 	border: 0.3rem #ffffff solid;
 	border-radius: 0.9rem;
-	
 	display: flex;
 	flex-direction: row;
 }
 
-.image7, .image8, .image9
+#image7, #image8, #image9
 {
 	width: 50%;
 	height: 100%;
@@ -502,29 +547,29 @@ nav ul
 	background-repeat: no-repeat;
 }
 
-.image7
+#image7
 {
 	background-image: url("./Images/hebergements/4_small/emile-guillemot-Bj_rcSC5XfE-unsplash.jpg");
 }
 
-.image8
+#image8
 {
 	background-image: url("./Images/hebergements/4_small/aw-creative-VGs8z60yT2c-unsplash.jpg");
 }
 
-.image9
+#image9
 {
 	background-image: url("./Images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
 }
 
-#legende
+.legendright
 {
 	display: flex;
 	flex-direction: column;
 	margin-left: 0.5rem;
 }
 
-#legende p
+.legendright p
 {
 	margin-top: 0.5rem;
 }
@@ -558,6 +603,31 @@ nav ul
 
 	/*HEADER*/
 
+	h1
+	{
+		font-size: 1.5rem;
+	}
+
+	p
+	{
+		font-size: 1rem;
+	}
+
+	h2
+	{
+		font-size: 1rem;
+	}
+
+	h3
+	{
+		font-size: 1.1rem;
+	}
+
+	h4
+	{
+		font-size: 1rem;
+	}
+
 	header
 	{
 		height: 9.375rem;
@@ -569,6 +639,11 @@ nav ul
 		flex-flow: row wrap;
 		width: 100%;
 		height: 6.25rem;
+	}
+
+	.barreG a, .barreD a, #inscription a
+	{
+		font-size: 1rem;
 	}
 
 	header img
@@ -625,11 +700,21 @@ nav ul
 		border-bottom: 0.19rem solid #0065FC;
 	}
 
-	/*SECTION RECHERCHE*/
+	                                    /*SECTION RECHERCHE*/
 
 	.searchwrapper
 	{
 		margin:0rem;
+	}
+
+	.baseline
+	{
+		padding: 1rem;
+	}
+
+	.baseline p
+	{
+		margin-top: 0.9rem;
 	}
 
 	#search
@@ -643,7 +728,7 @@ nav ul
 	{
 		border-right: none;
 		border-left: none;
-		width: 13.75rem;
+		width: 18rem;
 		height: 3.125rem;
 		font-size: 1rem;
 	}
@@ -677,7 +762,7 @@ nav ul
 	    justify-content: space-around;
 	    cursor: pointer;
 	    position: absolute;
-	    margin-left: 15rem;
+	    margin-left: 20rem;
 	}
 
 	#searchicon i:hover
@@ -687,7 +772,7 @@ nav ul
 	    border: 0.06rem #0065FC solid;
 	}
 
-	/*FILTRE*/
+	                                    /*FILTRE*/
 
 	.filterwrapper
 	{
@@ -705,11 +790,6 @@ nav ul
 		justify-content: space-around;
 	}
 
-	#filter h2, #filter h3
-	{
-		font-size: 1.2rem;
-	}
-
 	#titre
 	{
 		width: 100%;
@@ -722,10 +802,7 @@ nav ul
 		padding-bottom: 0.9rem;
 	}
 
-	#info i, #info p
-	{
-		font-size: 1rem;
-	}
+                                        /*SECTION HEBERGEMENT*/
 
 	#global
 	{
@@ -747,6 +824,33 @@ nav ul
 		order:2;
 	}
 
+	#accommodation i
+	{
+		font-size: 0.9rem;
+	}
+
+	#box2, #box3, #box4, #box5, #box6, #box7
+	{
+		width: 25rem;
+		height: 15rem;
+	}
+
+	.legendleft
+	{
+		margin-top: 0.3rem;
+	}
+
+	.legendleft p
+	{
+		margin-top: 0.2rem;
+	}
+
+	.stars
+	{
+		margin-top: 0.2rem;
+	}
+
+                                       /*POPULAR*/
 	#popular
 	{
 	    display: flex;
@@ -757,12 +861,17 @@ nav ul
 	    order: 1;
 	}
 
+	#box9 i
+{
+	font-size: 1.5rem;
+}
+
 	#box10, #box11, #box12
 	{
-		width:90%;
-	}
+		width: 25rem;
+		height: 10rem;	}
 
-	#legende
+	.legendright
 	{
 		width: 50%;
 	}
@@ -788,17 +897,7 @@ nav ul
 
 	#popular a
 	{
-		width: 30rem;
-	}
-
-	#legende h2
-	{
-		font-size: 1.1rem;
-	}
-
-	#legende p
-	{
-		font-size: 1rem;
+		width: 28rem;
 	}
 
 	.texte7, .texte8, .texte9

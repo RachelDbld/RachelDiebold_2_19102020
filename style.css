@@ -376,7 +376,7 @@ nav ul
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-end;
-	margin-top: 0.9rem;
+	margin-top: 0.7rem;
 }
 
 #box8
@@ -496,7 +496,6 @@ nav ul
 	justify-content: space-around;
 	align-items: center;
 	align-content: center;
-	padding: 1rem;
 }
 
 #box9
@@ -505,7 +504,7 @@ nav ul
     flex-direction: row;
 	width: 80%;
 	justify-content: space-between;
-	margin-top: 1rem;
+	margin:1rem;
 }
 
 #box9 i

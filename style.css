@@ -45,13 +45,14 @@ table {
                          /*RESET CSS*/
 
 @font-face {
-	font-family: Raleway;
-	src: url("./P2_DIEBOLD_RACHEL/Raleway/static");
+	font-family: 'Raleway Regular.ttf';
+	src: url("./Raleway/static") format('ttf');
+
 }
 
 body
 {
-    font-family: 'Raleway', sans-serif;
+    font-family: 'Raleway Regular', sans-serif;
     width: 100%;
 }
 
@@ -98,6 +99,7 @@ h4
 	margin: auto;
 	display: flex;
 	flex-direction: column;
+	padding: 0.8rem;
 
 }
 
@@ -147,7 +149,7 @@ nav ul
 {
 	display: flex;
 	justify-content: flex-end;
-	width: 25%;
+	width: 30%;
 }
 
 #inscription a
@@ -341,7 +343,6 @@ nav ul
 {
 	display: inline-flex;
 	justify-content: space-between;
-	min-width: 83rem;
 }
 
 #accommodation
@@ -606,7 +607,6 @@ nav ul
 	flex-wrap: wrap;
 	max-width: 90rem;
 	justify-content: space-between;
-	min-width: 83rem;
 }
 
 #activities a
@@ -633,9 +633,9 @@ nav ul
 
 #tab1, #tab2
 {
-	width: 50%;
 	display: flex;
 	justify-content: space-around;
+	margin-bottom: 2rem;
 }
 
 #col2, #col4
@@ -786,7 +786,7 @@ footer
 	justify-content: space-between;
 	flex-flow: row wrap;
 	background-color: #F2F2F2;
-	margin-top: 5rem;
+	margin-top: 2rem;
 	min-width: 83rem;
 
 }

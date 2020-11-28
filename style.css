@@ -16,7 +16,6 @@ time, mark, audio, video {
 	padding: 0;
 	border: 0;
 	font-size: 100%;
-	font: inherit;
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -42,55 +41,55 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
-                         /*RESET CSS*/
+                         /*REGLES GENERALES*/
 
-@font-face {
-	font-family: 'Raleway';
-	src: url("./Raleway/static/");
+*{
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
 }
 
 body
 {
-    font-family: 'Raleway Regular', sans-serif;
+    font-weight: 400;
     width: 100%;
 }
 
 p
 {
-	font-family: 'Raleway Medium', sans-serif;
+	font-weight: 500;
 	font-size: 0.9rem;
 	color: #000000;
 }
 
 h1
 {
-	font-family: 'Raleway ExtraBold', sans-serif;
+	font-weight: 700;
 	font-size: 1.1rem;
 	color: #000000;
 }
 
 h2
 {
-	font-family: 'Raleway ExtraBold', sans-serif;
+	font-weight: 700;
 	font-size:1rem;
 	color: #000000;
 }
 
 h3
 {
-	font-family: 'Raleway ExtraBold', sans-serif;
+	font-weight: 700;
 	font-size:0.9rem;
 	color: #000000;
 }
 
 h4
 {
-	font-family: 'Raleway Regular', sans-serif;
-	font-size:0.8rem;
+	font-weight: 400;
 	color: #000000;
 }
 
-
+                                          /*CONTAINER*/
 #container
 {
 	max-width: 90rem;
@@ -102,7 +101,7 @@ h4
 
 }
 
-                                                   /*HEADER*/
+                                          /*HEADER*/
 header
 {
 	display: flex;
@@ -111,6 +110,7 @@ header
 	width: 100%;
 }
 
+/*menu navigation*/
 nav
 {
 	display: flex;
@@ -129,9 +129,9 @@ nav ul
 	order: 0;
 }
 
-.barreG a, .barreD a
+.barreG a, .barreD a /*barre de survol*/
 {
-	font-family: 'Raleway Medium';
+	font-weight: 400;
 	font-size: 0.9rem;
 	color: #000000;
 	text-decoration: none;
@@ -144,7 +144,7 @@ nav ul
     border-top: 0.125rem solid;
 }
 
-#inscription
+#inscription /*bouton s inscrire*/
 {
 	display: flex;
 	justify-content: flex-end;
@@ -153,10 +153,9 @@ nav ul
 
 #inscription a
 {	
-	font-family: 'Raleway Regular';
 	font-size: 0.9rem;
 	color: #0065FC;
-	font-weight: bold;
+	font-weight: 700;
 	text-decoration: none;
 	padding-top: 1.563rem;
 }
@@ -164,38 +163,38 @@ nav ul
 #inscription a:hover
 {
 	color: #000000;
-	font-weight: bold;
+	font-weight: 500;
 	border-top: 0.125rem solid black;
 }
 
-                                            /*SECTION RECHERCHE*/
-#searchwrapper
+                                          /*SECTION RECHERCHE*/
+#searchwrapper /*container global*/
 {
 	display: flex;
 	flex-direction: column;
 	margin-top: 1.25rem;
 }
 
-#baseline
+#baseline /*titre*/
 {
 	display: flex;
 	flex-direction: column;
 	line-height: 150%;
 } 
 
-#search
+#search /*bouton recherche*/
 {
 	display: flex;
 	align-items: flex-end;
 	margin-top: 1.25rem;
 }
 
-#searchicon
+#searchicon /*icone rechercher*/
 {
 	display: none;
 }
 
-#marker i
+#marker i /*icone position*/
 {
 	font-size: 1rem;
 	display: flex;
@@ -217,16 +216,16 @@ nav ul
 	justify-content: space-around;
 	border : 0.125rem #F2F2F2 solid;
 	font-size: 0.75rem;
-	font-family: 'Raleway ExtraBold', sans-serif;
+	font-weight: 800;
 }
 
-#search h4
+#search h4 /*bouton rechercher*/
 {
 	display: flex;
 	color: #ffffff;
 	width: 6.25rem;
 	height: 2.5rem;
-	font-weight: bold;
+	font-weight: 400;
 	background-color: #0065FC;
 	border-radius: 0rem 0.9rem 0.9rem 0rem;
 	align-items: center;
@@ -241,8 +240,8 @@ nav ul
 	border: 0.06rem solid #0065FC;
 }
 
-                                               /*FILTRE*/
-#filterwrapper
+                                           /*FILTRE*/
+#filterwrapper /*container global*/
 {
 	display: flex;
 	flex-flow: row wrap;
@@ -251,12 +250,7 @@ nav ul
     height: 7.5rem;
 }
 
-#titre
-{
-	display: flex;
-}
-
-#filter
+#filter /*container filtres*/
 {
 	display: flex;
 	justify-content: space-around;
@@ -266,7 +260,18 @@ nav ul
 	width: 100%;
 }
 
-#filter i
+#titre
+{
+	display: flex;
+}
+
+#money, #child, #heart, #dog /*filtres*/
+{
+	display: flex;
+	align-items: center;
+}
+
+#filter i /*icones filtre*/
 {
 	display: flex;
 	align-items: center;
@@ -288,13 +293,7 @@ nav ul
 	cursor: pointer;
 }
 
-#filter h3:hover
-{
-	border : 0.06rem #0065FC solid;
-	border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
-}
-
-#filter h3
+#filter h3 /*nom des filtres*/
 {
 	display: flex;
 	align-items: center; 
@@ -308,12 +307,13 @@ nav ul
 	z-index: 1;
 }
 
-#money, #child, #heart, #dog
+#filter h3:hover
 {
-	display: flex;
-	align-items: center;
+	border : 0.06rem #0065FC solid;
+	border-radius: 9.375rem 9.375rem 9.375rem 9.375rem;
 }
-                                               /*INFO*/
+
+/*div info*/
 #info
 {
 	display: flex;
@@ -337,14 +337,14 @@ nav ul
 	margin:0.3rem;
 }
 
-                                               /*HEBERGEMENT*/
-#global
+                                            /*HEBERGEMENT*/
+#global /*container global*/
 {
 	display: inline-flex;
 	justify-content: space-between;
 }
 
-#accommodation
+#accommodation /*container hebergement*/
 {
 	display: flex;
 	flex-flow: row wrap;
@@ -370,7 +370,7 @@ nav ul
 	opacity: 0.8;
 }
 
-#box1
+#box1 /*titre section*/
 {
 	width: 90%;
 	display: flex;
@@ -379,7 +379,7 @@ nav ul
 	margin-top: 0.7rem;
 }
 
-#box8
+#box8 /*afficher plus*/
 {
 	width: 90%;
 	display: flex;
@@ -396,7 +396,7 @@ nav ul
 	margin: 0rem 0rem 0.9rem 0rem;
 }
 
-#box2, #box3, #box4, #box5, #box6, #box7
+#box2, #box3, #box4, #box5, #box6, #box7 /*cartes*/
 {
 	width: 15rem;
 	height: 10.5rem;
@@ -456,7 +456,7 @@ nav ul
 	background-image: url("./Images/hebergements/4_small/febrian-zakaria-M6S1WvfW68A-unsplash.jpg");
 }
 
-.legendleft
+.legendleft /*legende cartes*/
 {
 	margin: 0.5rem 0rem 0rem 0.5rem;
 }
@@ -486,7 +486,7 @@ nav ul
 }
 
                                     /*LES PLUS POPULAIRES*/
-#popular
+#popular /*container global*/
 {
 	max-width: 30%; 
 	background-color: #F2F2F2;
@@ -498,7 +498,7 @@ nav ul
 	align-content: center;
 }
 
-#box9
+#box9 /*titre*/
 {
     display: flex;
     flex-direction: row;
@@ -512,7 +512,7 @@ nav ul
 	font-size: 1.1rem;
 }
 
-#popular a
+#popular a /*lien cartes*/
 {
 	text-decoration: none;
 	background-color: #fff;
@@ -527,7 +527,7 @@ nav ul
 }
 
 
-#box10, #box11, #box12
+#box10, #box11, #box12 /*container cartes*/
 {
 	width: 18rem;
 	height: 8rem;
@@ -563,7 +563,7 @@ nav ul
 	background-image: url("./Images/hebergements/4_small/febrian-zakaria-sjvU0THccQA-unsplash.jpg");
 }
 
-.legendright
+.legendright /*legende cartes*/
 {
 	display: flex;
 	flex-direction: column;
@@ -600,7 +600,7 @@ nav ul
 
                                        /*SECTION ACTIVITE*/
 
-#activities
+#activities /*container global*/
 {
 	display: flex;
 	flex-wrap: wrap;
@@ -608,26 +608,69 @@ nav ul
 	justify-content: space-between;
 }
 
-#activities a
+#image10, #image11, #image12, #image13, #image14, #image15
 {
-	margin: 0rem 1.5rem;
+	width: 100%;
+	border-radius: 0.9rem 0.9rem 0rem 0.0rem;
+	
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
 
-#activities h1
+#image10
 {
-	display: inline-flex;
-    margin: 3rem 0rem 2rem;
-    width: 100%;
+	background-image: url("./Images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
 }
 
-#activities > div a:hover
+#image11
 {
-	opacity: 0.8;
+	background-image: url("./Images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
 }
 
-#activities > div h3
+#image12
 {
-	margin-left: 1rem;
+	background-image: url("./Images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
+}
+
+#image13
+{
+	background-image: url("./Images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
+}
+
+#image14
+{
+	background-image: url("./Images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
+}
+
+#image15
+{
+	background-image: url("./Images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
+}
+
+#image10, #image13
+{
+	height: 22rem;
+}
+
+#image11
+{
+	height: 11rem;
+}
+
+#image12
+{
+	height: 5rem;
+}
+
+#image14
+{
+	height: 8rem;
+}
+
+#image15
+{
+	height: 9rem;
 }
 
 #tab1, #tab2
@@ -635,13 +678,6 @@ nav ul
 	display: flex;
 	justify-content: space-around;
 	margin-bottom: 2rem;
-}
-
-#col2, #col4
-{
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 }
 
 #col1 a, #col3 a
@@ -653,6 +689,13 @@ nav ul
 	display: flex;
 	flex-direction: column;
 	text-decoration: none;
+}
+
+#col2, #col4
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 }
 
 #fort a
@@ -699,41 +742,6 @@ nav ul
 	text-decoration: none;
 }
 
-#image10, #image11, #image12, #image13, #image14, #image15
-{
-	width: 100%;
-	border-radius: 0.9rem 0.9rem 0rem 0.0rem;
-	
-	background-size: cover;
-	background-position: center;
-	background-repeat: no-repeat;
-}
-
-#image10, #image13
-{
-	height: 22rem;
-}
-
-#image11
-{
-	height: 11rem;
-}
-
-#image12
-{
-	height: 5rem;
-}
-
-#image14
-{
-	height: 8rem;
-}
-
-#image15
-{
-	height: 9rem;
-}
-
 #texte10, #texte11, #texte12, #texte13, #texte14, #texte15
 {
 	width: 100%;
@@ -745,34 +753,26 @@ nav ul
 	align-items: center;
 }
 
-#image10
+#activities a /*marges cartes*/
 {
-	background-image: url("./Images/activites/4_small/reno-laithienne-QUgJhdY5Fyk-unsplash.jpg");
+	margin: 0rem 1.5rem;
 }
 
-#image11
+#activities h1 /*titre*/
 {
-	background-image: url("./Images/activites/4_small/paul-hermann-QFTrLdQIRhI-unsplash.jpg");
+	display: inline-flex;
+    margin: 3rem 0rem 2rem;
+    width: 100%;
 }
 
-#image12
+#activities > div a:hover
 {
-	background-image: url("./Images/activites/4_small/kevin-hikari-rV_Qd1l-VXg-unsplash.jpg");
+	opacity: 0.8;
 }
 
-#image13
+#activities > div h3 /*legendes*/
 {
-	background-image: url("./Images/activites/4_small/kilyan-sockalingum-NR8-cBCN3aI-unsplash.jpg");
-}
-
-#image14
-{
-	background-image: url("./Images/activites/4_small/florian-wehde-xW9e8gdotxI-unsplash.jpg");
-}
-
-#image15
-{
-	background-image: url("./Images/activites/4_small/lena-paulin-wH2-EJoDcV0-unsplash.jpg");
+	margin-left: 1rem;
 }
 
 
@@ -780,7 +780,7 @@ nav ul
 
 footer 
 {
-	font-family: 'Raleway Regular', sans-serif;
+	font-weight: 400;
 	display: flex;
 	justify-content: space-between;
 	flex-flow: row wrap;
@@ -815,12 +815,12 @@ footer a:hover
 }
 
 
-                                       /*RESPONSIVE portable*/
+                                       /*RESPONSIVE*/
 
 @media screen and (max-width: 1024px)
 {
 
-	/*HEADER*/
+	/*REGLES GENERALES*/
 
 	h1
 	{
@@ -847,22 +847,11 @@ footer a:hover
 		font-size: 1rem;
 	}
 
+	/*HEADER*/
+
 	header
 	{
 		height: 9.375rem;
-	}
-
-	nav
-	{
-		display: flex;
-		flex-flow: row wrap;
-		width: 100%;
-		height: 6.25rem;
-	}
-
-	.barreG a, .barreD a, #inscription a
-	{
-		font-size: 1rem;
 	}
 
 	header img
@@ -876,15 +865,14 @@ footer a:hover
 		align-items: flex-end;
 	}
 
-	#inscription
+     /*menu navigation*/
+	nav
 	{
-		width: 90%;
+		display: flex;
+		flex-flow: row wrap;
+		width: 100%;
+		height: 6.25rem;
 	}
-
-	#inscription a:hover
-    {
-	    border-top: none;
-    }
 
 	nav ul
 	{
@@ -896,15 +884,30 @@ footer a:hover
     position: relative;
 	}
 
-	.barreG a:hover, .barreD a:hover
+	#inscription
 	{
-		border-top: none;
+		width: 90%;
 	}
+
+	#inscription a:hover
+    {
+	    border-top: none;
+    }
 
 	.barreG, .barreD
 	{
 	    border-bottom: 0.19rem solid #F2F2F2;
 	    width: 50%;	
+	}
+
+	.barreG:hover, .barreD:hover
+	{
+		border-bottom: 0.19rem solid #0065FC;
+	}
+
+	.barreG a, .barreD a, #inscription a
+	{
+		font-size: 1rem;
 	}
 
 	.barreG a, .barreD a
@@ -914,19 +917,19 @@ footer a:hover
 		padding-bottom: 0.9rem;
 	}
 
-	.barreG:hover, .barreD:hover
+	.barreG a:hover, .barreD a:hover
 	{
-		border-bottom: 0.19rem solid #0065FC;
+		border-top: none;
 	}
 
-	                                    /*SECTION RECHERCHE*/
+	                             /*SECTION RECHERCHE*/
 
 	#searchwrapper
 	{
 		margin:0rem;
 	}
 
-	#baseline
+	#baseline /*titre*/
 	{
 		padding: 1rem;
 	}
@@ -936,7 +939,7 @@ footer a:hover
 		margin-top: 0.9rem;
 	}
 
-	#search
+	#search /*bouton recherche*/
 	{
 		position: relative;
 		display: flex;
@@ -952,18 +955,18 @@ footer a:hover
 		font-size: 1rem;
 	}
 
-	#search h4
+	#search h4 /*bouton rechercher*/
 	{
 		display: none;
 	}
 
-	#marker i
+	#marker i /*icone position*/
 	{
 		width: 3.75rem;
 		height: 3.125rem;
 	}
 
-	#searchicon
+	#searchicon /*icone recherche*/
 	{
 		display: contents;
 	}
@@ -993,7 +996,7 @@ footer a:hover
 
 	                                    /*FILTRE*/
 
-	#filterwrapper
+	#filterwrapper /*container global*/
 	{
 		display: flex;
 		width: 100%;
@@ -1002,7 +1005,7 @@ footer a:hover
 		justify-content: space-between;
 	}
 
-	#filter
+	#filter /*container filtres*/
 	{
 		display: flex;
 		flex-wrap: wrap;
@@ -1016,14 +1019,14 @@ footer a:hover
 		padding-top: 0.9rem;
 	}
 
-	#money, #child, #heart, #dog
+	#money, #child, #heart, #dog /*filtres*/
 	{
 		padding-bottom: 0.9rem;
 	}
 
                                         /*SECTION HEBERGEMENT*/
 
-	#global
+	#global /*container global*/
 	{
 		display: flex;
 		flex-direction: column;
@@ -1031,7 +1034,7 @@ footer a:hover
 		min-width:100%;
 	}
 
-	#accommodation
+	#accommodation /*container hebergement*/
 	{
 		display: flex;
 		flex-flow: row wrap;
@@ -1054,18 +1057,13 @@ footer a:hover
 		width: 100%;
 	}
 
-	#box2, #box3, #box4, #box5, #box6, #box7
+	#box2, #box3, #box4, #box5, #box6, #box7 /*cartes*/
 	{
 		width: 25rem;
 		height: 15rem;
 	}
 
-	#box9
-	{
-		width: 100%;
-	}
-
-	.legendleft
+	.legendleft /*marges legende*/
 	{
 		margin-top: 0.3rem;
 	}
@@ -1081,7 +1079,7 @@ footer a:hover
 	}
 
                                        /*POPULAR*/
-	#popular
+	#popular /*conteiner global*/
 	{
 	    display: flex;
 	    flex-flow: row wrap;
@@ -1091,17 +1089,23 @@ footer a:hover
 	    order: 1;
 	}
 
-	#box9 i
-{
-	font-size: 1.5rem;
-}
+	#box9 /*titre*/
+	{
+		width: 100%;
+	}
 
-	#box10, #box11, #box12
+	#box9 i
+    {
+	font-size: 1.5rem;
+    }
+
+	#box10, #box11, #box12 /*cartes*/
 	{
 		width: 25rem;
-		height: 10rem;	}
+		height: 10rem;
+	}
 
-	.legendright
+	.legendright /*legende*/
 	{
 		width: 50%;
 	}
@@ -1123,7 +1127,7 @@ footer a:hover
 
 	                                /*SECTION ACTIVITE*/
 
-	#activities
+	#activities /*container global*/
 	{
 		display: flex;
 		flex-direction: column;

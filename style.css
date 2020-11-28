@@ -45,9 +45,8 @@ table {
                          /*RESET CSS*/
 
 @font-face {
-	font-family: 'Raleway Regular.ttf';
-	src: url("./Raleway/static") format('ttf');
-
+	font-family: 'Raleway';
+	src: url("./Raleway/static/");
 }
 
 body
